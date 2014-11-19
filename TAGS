@@ -1,0 +1,17 @@
+
+db.c,363
+typedef struct node{node6,76
+  char *key;key7,97
+  char *value;value8,110
+  struct node *left;left9,125
+  struct node *right;right10,146
+} Node;11,168
+Node** search(13,177
+void query(30,444
+void insert(42,660
+void print(56,1007
+void update(63,1135
+Node* find_min(72,1317
+void delete(84,1452
+void readline(108,1916
+Node* init_database(116,2074
