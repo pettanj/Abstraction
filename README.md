@@ -13,3 +13,13 @@ av Petrus Jonsson och Erik Stackelberg
   4. Remove entry - skriv in nyckeln på objektet som skall raderas.
   5. Print database - skriver ut databasens innehåll i terminalfönstret
   0. Exit database - stänger ned programmet. 
+
+###Redovisade Mål
+* A1
+* K30
+* A3
+* M37
+* M39
+* U55
+
+###Möjliga Vidareutvecklingar
