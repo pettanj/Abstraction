@@ -1,7 +1,22 @@
 typedef struct node Node;
 //reads line from buffer
+
+
+/**
+ * Reads input .db-file
+ * @param dest the write destination
+ * @param n max amount of characters in database
+ * @param source database file to read from
+ */
+
 void readline(char *dest, int n, FILE *source);
 //intializes database from .db file
+
+/**
+ * Initializes database 
+ * @param filename the name of db-file to open
+ * @return Returns an initialized database from input file 
+ */
 Node* init_database(char *filename);
 //Finds given key in database
 Node** search(Node** n, char* key);

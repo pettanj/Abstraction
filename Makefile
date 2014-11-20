@@ -1,5 +1,5 @@
 CC=gcc
-FLAGS=-Wall -ggdb -std=c99
+FLAGS=-Wall -std=c99
 PROGRAMS=db.c db.h main.c
 
 main: main.o db.o
