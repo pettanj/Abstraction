@@ -23,3 +23,5 @@ av Petrus Jonsson och Erik Stackelberg
 * U55
 
 ###Möjliga Vidareutvecklingar
+* Använda voidpekare för att göra datastrukturen mer generell
+* Grafiskt interface

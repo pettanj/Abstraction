@@ -10,7 +10,9 @@ typedef struct node{
   struct node *right;
 } Node;
 
-
+char* getValue(Node* n){
+  return n->value;
+}
 Node** search(Node** n, char* key){
   if (*n == NULL){
     return n;
@@ -26,8 +28,8 @@ Node** search(Node** n, char* key){
   if(compare > 0){
     search(&((*n)->left), key);
   }
-
 }
+
 void query(Node** n, char* key){
   Node** temp = search(n, key);
   if(*temp == NULL){
@@ -36,8 +38,6 @@ void query(Node** n, char* key){
     printf("Key: %s\nValue: %s\n", (*temp)->key, (*temp)->value);
   }
   return;
-    
-  
 }
 
 void insert(Node** n, char* key, char* value){
@@ -54,6 +54,7 @@ void insert(Node** n, char* key, char* value){
     *temp = newNode;
   }
 }
+
 void print(Node* n){
   if (n != NULL){
     print(n->left);
@@ -61,6 +62,7 @@ void print(Node* n){
     print(n->right);
   }
 }
+
 void update(Node* n, char* key, char* value){
   Node** temp = search(&n, key);
   if(*temp == NULL){
@@ -90,8 +92,8 @@ void delete(Node** n, char* key){
   }
 
   if ((*temp)->left && (*temp)->right){
-    Node* min = find_min((*temp)->right);
-    (*temp)->key = min->key;
+    Node* min      = find_min((*temp)->right);
+    (*temp)->key   = min->key;
     (*temp)->value = min->value;
     
 

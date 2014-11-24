@@ -1,0 +1,182 @@
+\hypertarget{db_8c}{\section{db.\+c File Reference}
+\label{db_8c}\index{db.\+c@{db.\+c}}
+}
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$string.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}db.\+h\char`\"{}}\\*
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structnode}{node}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{structnode}{node} \hyperlink{db_8c_aba087cc5af103c72c4e5864cc5622196}{Node}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \hyperlink{db_8c_a6c1a877cffd57f936ca79a41f61c8ff9}{get\+Value} (\hyperlink{db_8c_aba087cc5af103c72c4e5864cc5622196}{Node} $\ast$n)
+\item 
+\hyperlink{db_8c_aba087cc5af103c72c4e5864cc5622196}{Node} $\ast$$\ast$ \hyperlink{db_8c_abb2145de8fd02123c3655a4a7c8bef36}{search} (\hyperlink{db_8c_aba087cc5af103c72c4e5864cc5622196}{Node} $\ast$$\ast$n, char $\ast$key)
+\item 
+void \hyperlink{db_8c_aa1ffe53f5fac409750322fbf704a66cd}{query} (\hyperlink{db_8c_aba087cc5af103c72c4e5864cc5622196}{Node} $\ast$$\ast$n, char $\ast$key)
+\item 
+void \hyperlink{db_8c_a35febc6b06605cf9c4c1d5a12a0fc2e3}{insert} (\hyperlink{db_8c_aba087cc5af103c72c4e5864cc5622196}{Node} $\ast$$\ast$n, char $\ast$key, char $\ast$value)
+\item 
+void \hyperlink{db_8c_aadcb0d5f8da7bc604854e459c5bb5907}{print} (\hyperlink{db_8c_aba087cc5af103c72c4e5864cc5622196}{Node} $\ast$n)
+\item 
+void \hyperlink{db_8c_a69954404dadf81693e317cc20b73e3f0}{update} (\hyperlink{db_8c_aba087cc5af103c72c4e5864cc5622196}{Node} $\ast$n, char $\ast$key, char $\ast$value)
+\item 
+\hyperlink{db_8c_aba087cc5af103c72c4e5864cc5622196}{Node} $\ast$ \hyperlink{db_8c_a707912408dce8cfc17c882a94de3d2d5}{find\+\_\+min} (\hyperlink{db_8c_aba087cc5af103c72c4e5864cc5622196}{Node} $\ast$n)
+\item 
+void \hyperlink{db_8c_a4efc1ba0854430d855b4395e11607d78}{delete} (\hyperlink{db_8c_aba087cc5af103c72c4e5864cc5622196}{Node} $\ast$$\ast$n, char $\ast$key)
+\item 
+void \hyperlink{db_8c_a72cec63c3d7a173f684110244ef9cf09}{readline} (char $\ast$dest, int n, F\+I\+L\+E $\ast$source)
+\item 
+\hyperlink{db_8c_aba087cc5af103c72c4e5864cc5622196}{Node} $\ast$ \hyperlink{db_8c_a56996e4f5d3632975b8a5e20f35e8344}{init\+\_\+database} (char $\ast$filename)
+\end{DoxyCompactItemize}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{db_8c_aba087cc5af103c72c4e5864cc5622196}{\index{db.\+c@{db.\+c}!Node@{Node}}
+\index{Node@{Node}!db.\+c@{db.\+c}}
+\subsubsection[{Node}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf node}  {\bf Node}}}\label{db_8c_aba087cc5af103c72c4e5864cc5622196}
+
+
+\subsection{Function Documentation}
+\hypertarget{db_8c_a4efc1ba0854430d855b4395e11607d78}{\index{db.\+c@{db.\+c}!delete@{delete}}
+\index{delete@{delete}!db.\+c@{db.\+c}}
+\subsubsection[{delete}]{\setlength{\rightskip}{0pt plus 5cm}void delete (
+\begin{DoxyParamCaption}
+\item[{{\bf Node} $\ast$$\ast$}]{n, }
+\item[{char $\ast$}]{key}
+\end{DoxyParamCaption}
+)}}\label{db_8c_a4efc1ba0854430d855b4395e11607d78}
+deletes an element from a database 
+\begin{DoxyParams}{Parameters}
+{\em n} & the database \\
+\hline
+{\em key} & key to be deleted \\
+\hline
+\end{DoxyParams}
+\hypertarget{db_8c_a707912408dce8cfc17c882a94de3d2d5}{\index{db.\+c@{db.\+c}!find\+\_\+min@{find\+\_\+min}}
+\index{find\+\_\+min@{find\+\_\+min}!db.\+c@{db.\+c}}
+\subsubsection[{find\+\_\+min}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Node}$\ast$ find\+\_\+min (
+\begin{DoxyParamCaption}
+\item[{{\bf Node} $\ast$}]{n}
+\end{DoxyParamCaption}
+)}}\label{db_8c_a707912408dce8cfc17c882a94de3d2d5}
+\hypertarget{db_8c_a6c1a877cffd57f936ca79a41f61c8ff9}{\index{db.\+c@{db.\+c}!get\+Value@{get\+Value}}
+\index{get\+Value@{get\+Value}!db.\+c@{db.\+c}}
+\subsubsection[{get\+Value}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ get\+Value (
+\begin{DoxyParamCaption}
+\item[{{\bf Node} $\ast$}]{n}
+\end{DoxyParamCaption}
+)}}\label{db_8c_a6c1a877cffd57f936ca79a41f61c8ff9}
+\hypertarget{db_8c_a56996e4f5d3632975b8a5e20f35e8344}{\index{db.\+c@{db.\+c}!init\+\_\+database@{init\+\_\+database}}
+\index{init\+\_\+database@{init\+\_\+database}!db.\+c@{db.\+c}}
+\subsubsection[{init\+\_\+database}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Node}$\ast$ init\+\_\+database (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{filename}
+\end{DoxyParamCaption}
+)}}\label{db_8c_a56996e4f5d3632975b8a5e20f35e8344}
+Initializes database 
+\begin{DoxyParams}{Parameters}
+{\em filename} & the name of db-\/file to open \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns an initialized database from input file 
+\end{DoxyReturn}
+\hypertarget{db_8c_a35febc6b06605cf9c4c1d5a12a0fc2e3}{\index{db.\+c@{db.\+c}!insert@{insert}}
+\index{insert@{insert}!db.\+c@{db.\+c}}
+\subsubsection[{insert}]{\setlength{\rightskip}{0pt plus 5cm}void insert (
+\begin{DoxyParamCaption}
+\item[{{\bf Node} $\ast$$\ast$}]{n, }
+\item[{char $\ast$}]{key, }
+\item[{char $\ast$}]{value}
+\end{DoxyParamCaption}
+)}}\label{db_8c_a35febc6b06605cf9c4c1d5a12a0fc2e3}
+inserts new element to the database 
+\begin{DoxyParams}{Parameters}
+{\em n} & the database \\
+\hline
+{\em key} & key of the element to insert \\
+\hline
+{\em value} & the value of the element to insert \\
+\hline
+\end{DoxyParams}
+\hypertarget{db_8c_aadcb0d5f8da7bc604854e459c5bb5907}{\index{db.\+c@{db.\+c}!print@{print}}
+\index{print@{print}!db.\+c@{db.\+c}}
+\subsubsection[{print}]{\setlength{\rightskip}{0pt plus 5cm}void print (
+\begin{DoxyParamCaption}
+\item[{{\bf Node} $\ast$}]{n}
+\end{DoxyParamCaption}
+)}}\label{db_8c_aadcb0d5f8da7bc604854e459c5bb5907}
+prints the whole database 
+\begin{DoxyParams}{Parameters}
+{\em n} & the database \\
+\hline
+\end{DoxyParams}
+\hypertarget{db_8c_aa1ffe53f5fac409750322fbf704a66cd}{\index{db.\+c@{db.\+c}!query@{query}}
+\index{query@{query}!db.\+c@{db.\+c}}
+\subsubsection[{query}]{\setlength{\rightskip}{0pt plus 5cm}void query (
+\begin{DoxyParamCaption}
+\item[{{\bf Node} $\ast$$\ast$}]{n, }
+\item[{char $\ast$}]{key}
+\end{DoxyParamCaption}
+)}}\label{db_8c_aa1ffe53f5fac409750322fbf704a66cd}
+prints a given key 
+\begin{DoxyParams}{Parameters}
+{\em n} & the database \\
+\hline
+{\em key} & the key of the element to print \\
+\hline
+\end{DoxyParams}
+\hypertarget{db_8c_a72cec63c3d7a173f684110244ef9cf09}{\index{db.\+c@{db.\+c}!readline@{readline}}
+\index{readline@{readline}!db.\+c@{db.\+c}}
+\subsubsection[{readline}]{\setlength{\rightskip}{0pt plus 5cm}void readline (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{dest, }
+\item[{int}]{n, }
+\item[{F\+I\+L\+E $\ast$}]{source}
+\end{DoxyParamCaption}
+)}}\label{db_8c_a72cec63c3d7a173f684110244ef9cf09}
+reads next line from a source into the buffer 
+\begin{DoxyParams}{Parameters}
+{\em dest} & the write destination \\
+\hline
+{\em n} & size of Buffer \\
+\hline
+{\em source} & to read from \\
+\hline
+\end{DoxyParams}
+\hypertarget{db_8c_abb2145de8fd02123c3655a4a7c8bef36}{\index{db.\+c@{db.\+c}!search@{search}}
+\index{search@{search}!db.\+c@{db.\+c}}
+\subsubsection[{search}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Node}$\ast$$\ast$ search (
+\begin{DoxyParamCaption}
+\item[{{\bf Node} $\ast$$\ast$}]{n, }
+\item[{char $\ast$}]{key}
+\end{DoxyParamCaption}
+)}}\label{db_8c_abb2145de8fd02123c3655a4a7c8bef36}
+\hypertarget{db_8c_a69954404dadf81693e317cc20b73e3f0}{\index{db.\+c@{db.\+c}!update@{update}}
+\index{update@{update}!db.\+c@{db.\+c}}
+\subsubsection[{update}]{\setlength{\rightskip}{0pt plus 5cm}void update (
+\begin{DoxyParamCaption}
+\item[{{\bf Node} $\ast$}]{n, }
+\item[{char $\ast$}]{key, }
+\item[{char $\ast$}]{value}
+\end{DoxyParamCaption}
+)}}\label{db_8c_a69954404dadf81693e317cc20b73e3f0}
+Changes the value of given key 
+\begin{DoxyParams}{Parameters}
+{\em n} & the database \\
+\hline
+{\em key} & key to update \\
+\hline
+{\em value} & the new value \\
+\hline
+\end{DoxyParams}

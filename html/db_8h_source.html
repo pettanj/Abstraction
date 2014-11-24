@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.8"/>
-<title>My Project: db.h Source File</title>
+<title>Abstraction: db.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -22,7 +22,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectname">My Project
+   <div id="projectname">Abstraction
    </div>
   </td>
  </tr>
@@ -38,7 +38,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
-      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li><a href="annotated.html"><span>Data&#160;Structures</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
@@ -61,6 +61,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>Globals</span></a></li>
     </ul>
   </div>
 </div><!-- top -->
@@ -69,7 +70,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -83,32 +84,41 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">db.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structnode.html">node</a> <a class="code" href="structnode.html">Node</a>;</div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">//reads line from buffer</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keywordtype">void</span> readline(<span class="keywordtype">char</span> *dest, <span class="keywordtype">int</span> n, FILE *source);</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">//intializes database from .db file</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<a class="code" href="structnode.html">Node</a>* init_database(<span class="keywordtype">char</span> *filename);</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">//Finds given key in database</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<a class="code" href="structnode.html">Node</a>** search(<a class="code" href="structnode.html">Node</a>** n, <span class="keywordtype">char</span>* key);</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">//updates the value of given key</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keywordtype">void</span> update(<a class="code" href="structnode.html">Node</a>*list, <span class="keywordtype">char</span>* key, <span class="keywordtype">char</span>* value);</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">//inserts new key and value into the database</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keywordtype">void</span> insert(<a class="code" href="structnode.html">Node</a>** n, <span class="keywordtype">char</span>* key, <span class="keywordtype">char</span>* value);</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">//deletes item with given key in database</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keywordtype">void</span> <span class="keyword">delete</span>(<a class="code" href="structnode.html">Node</a>** n, <span class="keywordtype">char</span>* key);</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment">//prints the database</span></div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keywordtype">void</span> print(<a class="code" href="structnode.html">Node</a>* n);</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment">//prints the the key and the value given the key.</span></div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keywordtype">void</span> query(<a class="code" href="structnode.html">Node</a>** n, <span class="keywordtype">char</span>* key);</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
+<a href="db_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno"><a class="line" href="db_8h.html#ac09cf950484bd9550d14d602b0e5e7fb">    1</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structnode.html">node</a> <a class="code" href="structnode.html">Node</a>;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keywordtype">void</span> <a class="code" href="db_8h.html#a72cec63c3d7a173f684110244ef9cf09">readline</a>(<span class="keywordtype">char</span> *dest, <span class="keywordtype">int</span> n, FILE *source);</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<a class="code" href="structnode.html">Node</a>* <a class="code" href="db_8h.html#a56996e4f5d3632975b8a5e20f35e8344">init_database</a>(<span class="keywordtype">char</span> *filename);</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keywordtype">void</span> <a class="code" href="db_8h.html#a69954404dadf81693e317cc20b73e3f0">update</a>(<a class="code" href="structnode.html">Node</a>* n, <span class="keywordtype">char</span>* <a class="code" href="structnode.html#a69c02a14f8fdbc19c86fcd22854a4bda">key</a>, <span class="keywordtype">char</span>* <a class="code" href="structnode.html#a0d2c1eb2a9662a891bb09807232d7f9f">value</a>);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keywordtype">void</span> <a class="code" href="db_8h.html#a35febc6b06605cf9c4c1d5a12a0fc2e3">insert</a>(<a class="code" href="structnode.html">Node</a>** n, <span class="keywordtype">char</span>* <a class="code" href="structnode.html#a69c02a14f8fdbc19c86fcd22854a4bda">key</a>, <span class="keywordtype">char</span>* <a class="code" href="structnode.html#a0d2c1eb2a9662a891bb09807232d7f9f">value</a>);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="keywordtype">void</span> <span class="keyword">delete</span>(<a class="code" href="structnode.html">Node</a>** n, <span class="keywordtype">char</span>* <a class="code" href="structnode.html#a69c02a14f8fdbc19c86fcd22854a4bda">key</a>);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="keywordtype">void</span> <a class="code" href="db_8h.html#aadcb0d5f8da7bc604854e459c5bb5907">print</a>(<a class="code" href="structnode.html">Node</a>* n);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="keywordtype">void</span> <a class="code" href="db_8h.html#aa1ffe53f5fac409750322fbf704a66cd">query</a>(<a class="code" href="structnode.html">Node</a>** n, <span class="keywordtype">char</span>* <a class="code" href="structnode.html#a69c02a14f8fdbc19c86fcd22854a4bda">key</a>);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<a class="code" href="structnode.html">Node</a>** <a class="code" href="db_8h.html#abb2145de8fd02123c3655a4a7c8bef36">search</a>(<a class="code" href="structnode.html">Node</a>** n, <span class="keywordtype">char</span>* <a class="code" href="structnode.html#a69c02a14f8fdbc19c86fcd22854a4bda">key</a>);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="keywordtype">char</span>* <a class="code" href="db_8h.html#a6c1a877cffd57f936ca79a41f61c8ff9">getValue</a>(<a class="code" href="structnode.html">Node</a>* n);</div>
 <div class="ttc" id="structnode_html"><div class="ttname"><a href="structnode.html">node</a></div><div class="ttdef"><b>Definition:</b> db.c:6</div></div>
+<div class="ttc" id="db_8h_html_a69954404dadf81693e317cc20b73e3f0"><div class="ttname"><a href="db_8h.html#a69954404dadf81693e317cc20b73e3f0">update</a></div><div class="ttdeci">void update(Node *n, char *key, char *value)</div><div class="ttdef"><b>Definition:</b> db.c:66</div></div>
+<div class="ttc" id="db_8h_html_a72cec63c3d7a173f684110244ef9cf09"><div class="ttname"><a href="db_8h.html#a72cec63c3d7a173f684110244ef9cf09">readline</a></div><div class="ttdeci">void readline(char *dest, int n, FILE *source)</div><div class="ttdef"><b>Definition:</b> db.c:111</div></div>
+<div class="ttc" id="db_8h_html_a35febc6b06605cf9c4c1d5a12a0fc2e3"><div class="ttname"><a href="db_8h.html#a35febc6b06605cf9c4c1d5a12a0fc2e3">insert</a></div><div class="ttdeci">void insert(Node **n, char *key, char *value)</div><div class="ttdef"><b>Definition:</b> db.c:43</div></div>
+<div class="ttc" id="db_8h_html_a6c1a877cffd57f936ca79a41f61c8ff9"><div class="ttname"><a href="db_8h.html#a6c1a877cffd57f936ca79a41f61c8ff9">getValue</a></div><div class="ttdeci">char * getValue(Node *n)</div><div class="ttdef"><b>Definition:</b> db.c:13</div></div>
+<div class="ttc" id="structnode_html_a69c02a14f8fdbc19c86fcd22854a4bda"><div class="ttname"><a href="structnode.html#a69c02a14f8fdbc19c86fcd22854a4bda">node::key</a></div><div class="ttdeci">char * key</div><div class="ttdef"><b>Definition:</b> db.c:7</div></div>
+<div class="ttc" id="structnode_html_a0d2c1eb2a9662a891bb09807232d7f9f"><div class="ttname"><a href="structnode.html#a0d2c1eb2a9662a891bb09807232d7f9f">node::value</a></div><div class="ttdeci">char * value</div><div class="ttdef"><b>Definition:</b> db.c:8</div></div>
+<div class="ttc" id="db_8h_html_aadcb0d5f8da7bc604854e459c5bb5907"><div class="ttname"><a href="db_8h.html#aadcb0d5f8da7bc604854e459c5bb5907">print</a></div><div class="ttdeci">void print(Node *n)</div><div class="ttdef"><b>Definition:</b> db.c:58</div></div>
+<div class="ttc" id="db_8h_html_abb2145de8fd02123c3655a4a7c8bef36"><div class="ttname"><a href="db_8h.html#abb2145de8fd02123c3655a4a7c8bef36">search</a></div><div class="ttdeci">Node ** search(Node **n, char *key)</div><div class="ttdef"><b>Definition:</b> db.c:16</div></div>
+<div class="ttc" id="db_8h_html_a56996e4f5d3632975b8a5e20f35e8344"><div class="ttname"><a href="db_8h.html#a56996e4f5d3632975b8a5e20f35e8344">init_database</a></div><div class="ttdeci">Node * init_database(char *filename)</div><div class="ttdef"><b>Definition:</b> db.c:119</div></div>
+<div class="ttc" id="db_8h_html_aa1ffe53f5fac409750322fbf704a66cd"><div class="ttname"><a href="db_8h.html#aa1ffe53f5fac409750322fbf704a66cd">query</a></div><div class="ttdeci">void query(Node **n, char *key)</div><div class="ttdef"><b>Definition:</b> db.c:33</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Nov 20 2014 01:03:45 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Nov 24 2014 16:04:34 for Abstraction by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>
