@@ -56,3 +56,5 @@ void query(Node** n, char* key);
 Node** search(Node** n, char* key);
 
 char* getValue(Node* n);
+
+void clear(Node* n);

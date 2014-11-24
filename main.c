@@ -81,6 +81,7 @@ int main(int argc, char *argv[]){
       break;
     case 0:
       // Exit
+      clear(list);
       puts("Good bye!");
       break;
     default:

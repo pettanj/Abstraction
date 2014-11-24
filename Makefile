@@ -1,9 +1,9 @@
 CC=gcc
-FLAGS=-Wall -std=c99
+FLAGS=-Wall -std=c99 -pg
 PROGRAMS=db.c db.h main.c
 
 main: main.o db.o
-	gcc $(FLAGS) main.o db.o -o main -pg
+	gcc $(FLAGS) main.o db.o -o main 
 main.o: main.c db.h
 	gcc $(FLAGS) -c main.c
 db.o: db.c 

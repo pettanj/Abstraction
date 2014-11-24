@@ -18,6 +18,7 @@ void testInit_database(){
   char* val = getValue(*search(&n, "Dagger"));
   printf("%s", val);
   CU_ASSERT(strcmp(val, "2 4 0 2") == 0);
+  clear(n);
 }
 
 
@@ -26,6 +27,7 @@ void testUpdate(void){
   update(n, "Dagger", "1 3 3 7" );
   char* val = getValue(*search(&n, "Dagger"));
   CU_ASSERT(strcmp(val, "1 3 3 7") == 0);
+  clear(n);
 }
 
 void testInsert(){
@@ -33,11 +35,13 @@ void testInsert(){
   insert(&n, "Pettan", "1");
   char* val = getValue(*search(&n, "Pettan"));
   CU_ASSERT(strcmp(val, "1") == 0);
+  clear(n);
 }
 void testDelete(){
   Node* n = init_database("SWE.db");
   delete(&n, "Boatman");
   CU_ASSERT(*search(&n, "Boatman") == NULL);
+  clear(n);
 }
 
  int main(){
